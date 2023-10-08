@@ -14,5 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('pages.login');
+})->name('login');
+Route::post('/proses_login', [AuthController::class,'login'])->name('proses_login');
